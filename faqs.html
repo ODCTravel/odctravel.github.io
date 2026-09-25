@@ -1,63 +1,167 @@
-<div style="background-color: #f9f9f9; border-radius: 15px; color: #333333; font-family: &quot;Segoe UI&quot;, Arial, sans-serif; line-height: 1.8; margin: auto; max-width: 850px; padding: 20px;">
-  <div style="margin-bottom: 35px; text-align: center;">
-    <h2 style="color: #d35400; margin-bottom: 10px; text-transform: uppercase;">🙋 Frequently Asked Questions</h2>
-    <p style="color: #666666; font-style: italic;">Everything you need to know for your perfect trip with ODC Travel</p>
-  </div>
-  <div style="margin-bottom: 30px;">
-    <h3 style="background: rgb(255, 119, 0); border-radius: 5px; color: white; font-size: 18px; padding: 10px 15px;">💰 Money &amp; Currency</h3>
-    <div style="background: white; border-left: 4px solid rgb(255, 119, 0); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px; margin-top: 10px; padding: 15px;">
-      <p><b>Is it better to use USD or VND?</b><br />
-      While USD is widely accepted in hotels and tours, <b>Vietnam Dong (VND)</b> is best for daily expenses like local food, street stalls, and small purchases. We recommend carrying a mix of both. Make sure your VND notes are not badly torn, as many places may refuse them.</p>
-      <p><b>Where can I change money?</b><br />
-      You can exchange currency at authorized banks or large hotels. If you are heading to remote areas, please stock up on enough cash (VND) beforehand.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - ODC Travel Vietnam</title>
+    <style>
+        /* CSS Reset & General */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.8; color: #333; background-color: #f8f9fa; }
+        a { text-decoration: none; color: inherit; }
+
+        /* 1. Top Bar Navigation */
+        .top-bar { background-color: #1a252f; color: #fff; padding: 8px 20px; font-size: 13px; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .top-nav { display: flex; gap: 15px; flex-wrap: wrap; }
+        .top-nav a { color: #ecf0f1; transition: color 0.3s; }
+        .top-nav a:hover, .top-nav a.active { color: #f39c12; }
+
+        /* Multi-Language Dropdown Selector */
+        .lang-selector-wrapper { position: relative; display: inline-block; }
+        .lang-select {
+            background-color: #2c3e50;
+            color: #fff;
+            border: 1px solid #455a64;
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Header & Logo */
+        .header { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: bold; color: #d35400; text-transform: uppercase; }
+        .contact-info { text-align: right; font-size: 14px; }
+        .contact-info span { font-weight: bold; color: #27ae60; }
+
+        /* 2. Main Navigation Bar */
+        .main-bar { background-color: #d35400; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .main-nav-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; }
+        .main-nav-container a { color: #fff; padding: 14px 18px; font-weight: bold; font-size: 14px; transition: background 0.3s; }
+        .main-nav-container a:hover, .main-nav-container a.active { background-color: #e67e22; }
+        .main-nav-container a.hot-deal { background-color: #c0392b; }
+
+        /* Main Content Container */
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; min-height: 500px; }
+
+        /* Footer */
+        .footer { background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 25px 20px; margin-top: 50px; font-size: 14px; }
+
+        @media (max-width: 768px) {
+            .top-bar-container, .header-container { flex-direction: column; gap: 10px; text-align: center; }
+            .top-nav, .main-nav-container { justify-content: center; }
+            .main-nav-container a { padding: 10px 12px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Top Taskbar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <nav class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About us</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="faqs.html" class="active">FAQs</a>
+                <a href="why-book-with-us.html">Why book with us ?</a>
+                <a href="contact-us.html">Contact us</a>
+                <a href="partners.html">Partners of ODC Travel</a>
+            </nav>
+
+            <div class="lang-selector-wrapper">
+                <select class="lang-select">
+                    <option value="en" selected>🌐 English</option>
+                    <option value="fr">🌐 Français</option>
+                    <option value="de">🌐 Deutsch</option>
+                    <option value="es">🌐 Español</option>
+                    <option value="vi">🌐 Tiếng Việt</option>
+                </select>
+            </div>
+        </div>
     </div>
-  </div>
-  <div style="margin-bottom: 30px;">
-    <h3 style="background: rgb(255, 119, 0); border-radius: 5px; color: white; font-size: 18px; padding: 10px 15px;">🍜 Travel Experience</h3>
-    <div style="background: white; border-left: 4px solid rgb(255, 119, 0); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px; margin-top: 10px; padding: 15px;">
-      <p><b>Any recommendations for eating in Vietnam?</b><br />
-      Try small local restaurants to feel the authentic culture! Stick to busy places with fresh, thoroughly cooked food. Seeing your food cooked (like a steaming bowl of Pho on the street) is often a great bet.</p>
-      <p><b>How safe is Vietnam?</b><br />
-      Vietnam is among the safest countries to visit. However, like any tourist destination, please be vigilant with your valuables (expensive watches, jewelry) in crowded areas to avoid pickpockets.</p>
-      <p><b>When is the best time to visit?</b><br />
-      Climate varies by region. Generally, Spring and Autumn are ideal. Tell us your interests, and we will advise the best schedule for you!</p>
-    </div>
-  </div>
-  <div style="margin-bottom: 30px;">
-    <h3 style="background: rgb(255, 119, 0); border-radius: 5px; color: white; font-size: 18px; padding: 10px 15px;">📅 Booking &amp; Payment</h3>
-    <div style="background: white; border-left: 4px solid rgb(255, 119, 0); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px; margin-top: 10px; padding: 15px;">
-      <p><b>How do I book and pay for a tour?</b><br />
-      Simply click <b>"Book This Tour"</b> on our website and fill in the form.</p>
-      <ul style="margin-top: 5px; padding-left: 20px;">
-        <li>Total value &lt; 500 USD: Confirm via voucher, pay the balance upon arrival.</li>
-        <li>Total value &gt; 500 USD: A deposit of 20-40% is required to secure your booking.</li>
-      </ul>
-      We accept MasterCard, Visa, American Express, and Maestro Online.
-      <p><b>Are there any hidden costs or tipping?</b><br />
-      All inclusions and exclusions are clearly mentioned in your confirmation. Tipping is not compulsory but is a kind way to show appreciation to your guides and drivers if you are satisfied with their service.</p>
-      <p><b>Can I have a tailor-made tour?</b><br />
-      Yes! If our sample tours don't match your needs, use the <b>Tailor-made</b> tab. Our experts will create a customized trip just for you.</p>
-    </div>
-  </div>
-  <div style="margin-bottom: 30px;">
-    <h3 style="background: rgb(255, 119, 0); border-radius: 5px; color: white; font-size: 18px; padding: 10px 15px;">🚐 Pick-up &amp; Support</h3>
-    <div style="background: white; border-left: 4px solid rgb(255, 119, 0); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px; margin-top: 10px; padding: 15px;">
-      <p><b>Where and when will I be picked up?</b><br />
-      We offer pick-up services from central hotels. Your specific pick-up time and location will be confirmed in your e-voucher. Please print your voucher and bring it with you on the day of travel.</p>
-      <p><b>How do I cancel or amend my booking?</b><br />
-      Amendments depend on availability; please contact us as soon as possible to make changes. For cancellations, please notify us within the following timeframes:</p>
-      <ul style="margin-top: 5px; padding-left: 20px;">
-        <li><b>Tours 1–3 days:</b> 72 hours before departure.</li>
-        <li><b>Tours 4–6 days:</b> 1 week before departure.</li>
-        <li><b>Long-haul or cross-Vietnam tours:</b> 1 to 3 months before departure.</li>
-      </ul>
-    </div>
-  </div>
-  <div style="background: rgb(34, 34, 34); border-radius: 15px; color: white; margin-top: 40px; padding: 25px; text-align: center;">
-    <p style="font-size: 18px; margin-top: 0px;">Still have more questions?</p>
-    <a href="https://wa.me/84916069069" style="background: rgb(37, 211, 102); border-radius: 50px; color: white; display: inline-block; font-weight: bold; margin: 10px 0px; padding: 12px 30px; text-decoration: none;" target="_blank">
-      💬 CHAT WITH OUR EXPERTS
-    </a>
-    <p style="color: #aaaaaa; font-size: 13px; margin-bottom: 0px;">Instant Support via WhatsApp: +84 916 069 069</p>
-  </div>
-</div>
+
+    <!-- Header & Logo -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">ODC TRAVEL</a>
+            <div class="contact-info">
+                <p>Hotline / WhatsApp: <span>+84 949 555 468</span></p>
+                <p>Email: <span>info@odctravel.com.vn</span></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Main Navigation Bar -->
+    <nav class="main-bar">
+        <div class="main-nav-container">
+            <a href="index.html">Home</a>
+            <a href="featured-tours.html">Featured Tours</a>
+            <a href="tours-northern-vietnam.html">Tours Northern Vietnam</a>
+            <a href="tours-central-vietnam.html">Tours Central Vietnam</a>
+            <a href="tours-southern-vietnam.html">Tours Southern Vietnam</a>
+            <a href="travel-blog.html">Travel Blog/Guide</a>
+            <a href="hot-deals.html" class="hot-deal">🔥 Hot Deals</a>
+        </div>
+    </nav>
+
+    <!-- Main Content: FAQs -->
+    <main class="container">
+        <div style="background-color: #f9f9f9; border-radius: 15px; color: #333333; font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.8; margin: auto; max-width: 850px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <div style="margin-bottom: 35px; text-align: center;">
+                <h2 style="color: #d35400; margin-bottom: 10px; text-transform: uppercase;">🙋 Frequently Asked Questions</h2>
+                <p style="color: #666666; font-style: italic;">Everything you need to know for your perfect trip with ODC Travel</p>
+            </div>
+
+            <!-- Category 1 -->
+            <div style="margin-bottom: 30px;">
+                <h3 style="background: rgb(255, 119, 0); border-radius: 5px; color: white; font-size: 18px; padding: 10px 15px;">💰 Money &amp; Currency</h3>
+                <div style="background: white; border-left: 4px solid rgb(255, 119, 0); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px; margin-top: 10px; padding: 15px;">
+                    <p><b>Is it better to use USD or VND?</b><br />
+                    While USD is widely accepted in hotels and tours, <b>Vietnam Dong (VND)</b> is best for daily expenses like local food, street stalls, and small purchases. We recommend carrying a mix of both. Make sure your VND notes are not badly torn, as many places may refuse them.</p>
+                    <p style="margin-top: 10px;"><b>Where can I change money?</b><br />
+                    You can exchange currency at authorized banks or large hotels. If you are heading to remote areas, please stock up on enough cash (VND) beforehand.</p>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div style="margin-bottom: 30px;">
+                <h3 style="background: rgb(255, 119, 0); border-radius: 5px; color: white; font-size: 18px; padding: 10px 15px;">🍜 Travel Experience</h3>
+                <div style="background: white; border-left: 4px solid rgb(255, 119, 0); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px; margin-top: 10px; padding: 15px;">
+                    <p><b>Any recommendations for eating in Vietnam?</b><br />
+                    Try small local restaurants to feel the authentic culture! Stick to busy places with fresh, thoroughly cooked food. Seeing your food cooked (like a steaming bowl of Pho on the street) is often a great bet.</p>
+                    <p style="margin-top: 10px;"><b>How safe is Vietnam?</b><br />
+                    Vietnam is among the safest countries to visit. However, like any tourist destination, please be vigilant with your valuables (expensive watches, jewelry) in crowded areas to avoid pickpockets.</p>
+                    <p style="margin-top: 10px;"><b>When is the best time to visit?</b><br />
+                    Climate varies by region. Generally, Spring and Autumn are ideal. Tell us your interests, and we will advise the best schedule for you!</p>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div style="margin-bottom: 30px;">
+                <h3 style="background: rgb(255, 119, 0); border-radius: 5px; color: white; font-size: 18px; padding: 10px 15px;">📅 Booking &amp; Payment</h3>
+                <div style="background: white; border-left: 4px solid rgb(255, 119, 0); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px; margin-top: 10px; padding: 15px;">
+                    <p><b>How do I book and pay for a tour?</b><br />
+                    Simply click <b>"Book This Tour"</b> on our website and fill in the form.</p>
+                    <ul style="margin-top: 5px; padding-left: 20px;">
+                        <li>Total value &lt; 500 USD: Confirm via voucher, pay the balance upon arrival.</li>
+                        <li>Total value &gt; 500 USD: A deposit of 20-40% is required to secure your booking.</li>
+                    </ul>
+                    <p style="margin-top: 8px;">We accept MasterCard, Visa, American Express, and Maestro Online.</p>
+                    <p style="margin-top: 10px;"><b>Are there any hidden costs or tipping?</b><br />
+                    All tour package details clearly state included and excluded services. Tipping is not mandatory in Vietnam but is always appreciated for guides and drivers if you enjoyed their service.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 ODC Travel Vietnam. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
