@@ -1,4 +1,120 @@
-<div style="color: #333333; font-family: &quot;Segoe UI&quot;, Arial, sans-serif; line-height: 1.8; margin: auto; max-width: 900px; padding: 20px;">
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODC Travel - Unique Vietnam Tours & Travel Experiences</title>
+    <style>
+        /* CSS Reset & Cơ bản */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        a { text-decoration: none; color: inherit; }
+
+        /* 1. Top Bar Navigation (Phía trên cùng) */
+        .top-bar { background-color: #1a252f; color: #fff; padding: 8px 20px; font-size: 13px; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .top-nav { display: flex; gap: 15px; flex-wrap: wrap; }
+        .top-nav a { color: #ecf0f1; transition: color 0.3s; }
+        .top-nav a:hover { color: #f39c12; }
+
+        /* Header & Logo */
+        .header { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: bold; color: #d35400; text-transform: uppercase; }
+        .contact-info { text-align: right; font-size: 14px; }
+        .contact-info span { font-weight: bold; color: #27ae60; }
+
+        /* Banner */
+        .hero-banner { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; color: #fff; text-align: center; padding: 60px 20px; }
+        .hero-banner h1 { font-size: 36px; margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
+        .hero-banner p { font-size: 18px; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
+
+        /* 2. Main Navigation Bar (Phía dưới Banner) */
+        .main-bar { background-color: #d35400; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .main-nav-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; }
+        .main-nav-container a { color: #fff; padding: 14px 18px; font-weight: bold; font-size: 14px; transition: background 0.3s; }
+        .main-nav-container a:hover, .main-nav-container a.active { background-color: #e67e22; }
+        .main-nav-container a.hot-deal { background-color: #c0392b; }
+        .main-nav-container a.hot-deal:hover { background-color: #e74c3c; }
+
+        /* Khung nội dung chính */
+        .content-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); min-height: 400px; padding: 30px; }
+        
+        /* Footer */
+        .footer { background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 20px; margin-top: 40px; font-size: 14px; }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 768px) {
+            .top-bar-container, .header-container { flex-direction: column; gap: 10px; text-align: center; }
+            .top-nav, .main-nav-container { justify-content: center; }
+            .main-nav-container a { padding: 10px 12px; font-size: 12px; }
+            .hero-banner h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Taskbar trên cùng của trang -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <nav class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About us</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="why-book-with-us.html">Why book with us ?</a>
+                <a href="contact-us.html">Contact us</a>
+                <a href="partners.html">Partners of ODC Travel</a>
+            </nav>
+            <div>
+                <span>🌐 English</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Logo & Thông tin liên hệ -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">ODC TRAVEL</a>
+            <div class="contact-info">
+                <p>Hotline / WhatsApp: <span>+84 9xx xxx xxx</span></p>
+                <p>Email: <span>info@odctravel.com</span></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner chính -->
+    <section class="hero-banner">
+        <h1>Welcome to ODC Travel Vietnam</h1>
+        <p>Explore Authentic Local Experiences & Tailor-Made Tours</p>
+    </section>
+
+    <!-- 2. Taskbar phía dưới Banner -->
+    <nav class="main-bar">
+        <div class="main-nav-container">
+            <a href="index.html" class="active">Home</a>
+            <a href="featured-tours.html">Featured Tours</a>
+            <a href="tours-northern-vietnam.html">Tours Northern Vietnam</a>
+            <a href="tours-central-vietnam.html">Tours Central Vietnam</a>
+            <a href="tours-southern-vietnam.html">Tours Southern Vietnam</a>
+            <a href="travel-blog.html">Travel Blog/Guide</a>
+            <a href="hot-deals.html" class="hot-deal">🔥 Hot Deals</a>
+        </div>
+    </nav>
+
+    <!-- Khu vực nội dung thay đổi của từng trang -->
+    <main class="content-container">
+        <h2>Welcome to ODC Travel</h2>
+        <p style="margin-top: 15px;">Nội dung trang web của bạn sẽ hiển thị tại đây. Bạn có thể chèn danh sách Tour nổi bật, hình ảnh, bài viết giới thiệu hoặc các đánh giá của khách hàng vào khu vực này.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 ODC Travel Vietnam. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html><div style="color: #333333; font-family: &quot;Segoe UI&quot;, Arial, sans-serif; line-height: 1.8; margin: auto; max-width: 900px; padding: 20px;">
 
   <div style="margin-bottom: 30px; text-align: center;">
     <img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXflNAVqTPdt3PkxTL_mdFheIp-T2gQIEFsRwlli4faO0QBc5q2C0aNnzKb1LUAKftbReKT30upx-KGSNE0yT0wdiMKSeSZuaVjgE5cdAc8vIV_oVdr6gKYjo0EicVcsSlgzEGPriSjS3MH3nymm-w1lSnPVtHEEQ3XsxYpeTc1LsktKHN5t8ifd5ODElv/s1600/About%20us001.jpg" style="border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 15px; width: 100%;" />
