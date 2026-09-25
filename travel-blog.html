@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog & Guide - ODC Travel</title>
+    <style>
+        /* CSS Reset & General */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        a { text-decoration: none; color: inherit; }
+
+        /* 1. Top Bar Navigation */
+        .top-bar { background-color: #1a252f; color: #fff; padding: 8px 20px; font-size: 13px; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .top-nav { display: flex; gap: 15px; flex-wrap: wrap; }
+        .top-nav a { color: #ecf0f1; transition: color 0.3s; }
+        .top-nav a:hover { color: #f39c12; }
+
+        /* Header & Logo */
+        .header { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; font-weight: bold; color: #d35400; text-transform: uppercase; }
+        .contact-info { text-align: right; font-size: 14px; }
+        .contact-info span { font-weight: bold; color: #27ae60; }
+
+        /* Banner */
+        .hero-banner { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; color: #fff; text-align: center; padding: 40px 20px; }
+        .hero-banner h1 { font-size: 32px; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
+
+        /* 2. Main Navigation Bar */
+        .main-bar { background-color: #d35400; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .main-nav-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; }
+        .main-nav-container a { color: #fff; padding: 14px 18px; font-weight: bold; font-size: 14px; transition: background 0.3s; }
+        .main-nav-container a:hover, .main-nav-container a.active { background-color: #e67e22; }
+        .main-nav-container a.hot-deal { background-color: #c0392b; }
+
+        /* Khung nội dung chính */
+        .content-container { max-width: 1200px; margin: 30px auto; padding: 20px; }
+
+        /* Category Styling */
+        .category-section { margin-bottom: 40px; }
+        .category-title { font-size: 24px; color: #2c3e50; border-bottom: 3px solid #d35400; padding-bottom: 8px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        
+        /* Grid Layout */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 20px; }
+
+        /* Blog Card */
+        .blog-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .blog-img { width: 100%; height: 180px; object-fit: cover; }
+        .blog-body { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .blog-title { font-size: 16px; font-weight: bold; color: #2c3e50; margin-bottom: 10px; line-height: 1.4; }
+        .blog-desc { font-size: 13px; color: #7f8c8d; margin-bottom: 15px; }
+        .btn-read { background-color: #2980b9; color: #fff; padding: 8px 12px; border-radius: 4px; font-size: 13px; font-weight: bold; text-align: center; transition: background 0.3s; }
+        .btn-read:hover { background-color: #3498db; }
+
+        /* Video Card Special */
+        .video-card .btn-read { background-color: #c0392b; }
+        .video-card .btn-read:hover { background-color: #e74c3c; }
+
+        /* Footer */
+        .footer { background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 20px; margin-top: 40px; font-size: 14px; }
+
+        @media (max-width: 768px) {
+            .top-bar-container, .header-container { flex-direction: column; gap: 10px; text-align: center; }
+            .top-nav, .main-nav-container { justify-content: center; }
+            .main-nav-container a { padding: 10px 12px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Taskbar trên cùng -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <nav class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About us</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="why-book-with-us.html">Why book with us ?</a>
+                <a href="contact-us.html">Contact us</a>
+                <a href="partners.html">Partners of ODC Travel</a>
+            </nav>
+            <div><span>🌐 English</span></div>
+        </div>
+    </div>
+
+    <!-- Header Logo -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">ODC TRAVEL</a>
+            <div class="contact-info">
+                <p>Hotline / WhatsApp: <span>+84 9xx xxx xxx</span></p>
+                <p>Email: <span>info@odctravel.com</span></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="hero-banner">
+        <h1>Travel Blog & Video Guides</h1>
+    </section>
+
+    <!-- 2. Main Taskbar -->
+    <nav class="main-bar">
+        <div class="main-nav-container">
+            <a href="index.html">Home</a>
+            <a href="featured-tours.html">Featured Tours</a>
+            <a href="tours-northern-vietnam.html">Tours Northern Vietnam</a>
+            <a href="tours-central-vietnam.html">Tours Central Vietnam</a>
+            <a href="tours-southern-vietnam.html">Tours Southern Vietnam</a>
+            <a href="travel-blog.html" class="active">Travel Blog/Guide</a>
+            <a href="hot-deals.html" class="hot-deal">🔥 Hot Deals</a>
+        </div>
+    </nav>
+
+    <!-- KHU VỰC BLOG & VIDEOS -->
+    <main class="content-container">
+
+        <!-- NHÓM 1: VIETNAM CULTURE -->
+        <section class="category-section">
+            <h2 class="category-title">🎎 Vietnam Culture & Insights</h2>
+            <div class="card-grid">
+
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=500" alt="Minorities People" class="blog-img">
+                    <div class="blog-body">
+                        <h3 class="blog-title">Ethnic Minorities People of Northern Vietnam</h3>
+                        <p class="blog-desc">Explore the rich traditions, colorful costumes, and unique heritage of ethnic groups in Sapa and Ha Giang.</p>
+                        <a href="blog-minorities-people.html" class="btn-read">Read Article</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=500" alt="Vietnam Today" class="blog-img">
+                    <div class="blog-body">
+                        <h3 class="blog-title">Vietnam Today: Modern Life & Ancient Culture</h3>
+                        <p class="blog-desc">A deep dive into how modern developments blend seamlessly with traditional Vietnamese values and lifestyle.</p>
+                        <a href="blog-vietnam-today.html" class="btn-read">Read Article</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NHÓM 2: VIDEO TOURS -->
+        <section class="category-section">
+            <h2 class="category-title">🎥 Video Tours Gallery</h2>
+            <div class="card-grid">
+
+                <div class="blog-card video-card">
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=500" alt="Halong Bay Video" class="blog-img">
+                    <div class="blog-body">
+                        <h3 class="blog-title">Halong Bay Cruise Videos</h3>
+                        <p class="blog-desc">Watch breathtaking drone footage and authentic guest experiences cruising through UNESCO Halong Bay.</p>
+                        <a href="video-halong-bay.html" class="btn-read">▶ Watch Videos</a>
+                    </div>
+                </div>
+
+                <div class="blog-card video-card">
+                    <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500" alt="Daily Tour Video" class="blog-img">
+                    <div class="blog-body">
+                        <h3 class="blog-title">Daily Tour Highlights</h3>
+                        <p class="blog-desc">Short video clips featuring day excursions in Hanoi, Ninh Binh, Hoi An, and Saigon.</p>
+                        <a href="video-daily-tours.html" class="btn-read">▶ Watch Videos</a>
+                    </div>
+                </div>
+
+                <div class="blog-card video-card">
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=500" alt="North East Video" class="blog-img">
+                    <div class="blog-body">
+                        <h3 class="blog-title">North East Landscape Videos</h3>
+                        <p class="blog-desc">Discover Ba Be Lake and Ban Gioc Waterfall in stunning high-definition video tours.</p>
+                        <a href="video-north-east.html" class="btn-read">▶ Watch Videos</a>
+                    </div>
+                </div>
+
+                <div class="blog-card video-card">
+                    <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=500" alt="North West Video" class="blog-img">
+                    <div class="blog-body">
+                        <h3 class="blog-title">North West & Sapa Trekking Videos</h3>
+                        <p class="blog-desc">Immerse yourself in Sapa's terraced rice fields through our real trekking footage.</p>
+                        <a href="video-north-west.html" class="btn-read">▶ Watch Videos</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 ODC Travel Vietnam. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
