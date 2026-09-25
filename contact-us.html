@@ -5,61 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - ODC Travel Vietnam</title>
     <style>
-        /* CSS Reset & General */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
         a { text-decoration: none; color: inherit; }
 
-        /* 1. Top Bar Navigation */
+        /* Top Bar */
         .top-bar { background-color: #1a252f; color: #fff; padding: 8px 20px; font-size: 13px; }
-        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-        .top-nav { display: flex; gap: 15px; flex-wrap: wrap; }
-        .top-nav a { color: #ecf0f1; transition: color 0.3s; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .top-nav { display: flex; gap: 15px; }
+        .top-nav a { color: #ecf0f1; }
         .top-nav a:hover, .top-nav a.active { color: #f39c12; }
 
-        /* Multi-Language Dropdown Selector */
-        .lang-selector-wrapper { position: relative; display: inline-block; }
-        .lang-select {
-            background-color: #2c3e50;
-            color: #fff;
-            border: 1px solid #455a64;
-            padding: 4px 10px;
-            font-size: 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            outline: none;
-        }
-
-        /* Header & Logo */
+        /* Header */
         .header { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; }
         .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 28px; font-weight: bold; color: #d35400; text-transform: uppercase; }
-        .contact-info { text-align: right; font-size: 14px; }
-        .contact-info span { font-weight: bold; color: #27ae60; }
 
-        /* 2. Main Navigation Bar */
-        .main-bar { background-color: #d35400; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .main-nav-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; }
-        .main-nav-container a { color: #fff; padding: 14px 18px; font-weight: bold; font-size: 14px; transition: background 0.3s; }
+        /* Main Nav */
+        .main-bar { background-color: #d35400; }
+        .main-nav-container { max-width: 1200px; margin: 0 auto; display: flex; }
+        .main-nav-container a { color: #fff; padding: 14px 18px; font-weight: bold; font-size: 14px; }
         .main-nav-container a:hover, .main-nav-container a.active { background-color: #e67e22; }
-        .main-nav-container a.hot-deal { background-color: #c0392b; }
 
-        /* Main Content Container */
-        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; min-height: 500px; }
-
-        /* Footer */
-        .footer { background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 25px 20px; margin-top: 50px; font-size: 14px; }
-
-        @media (max-width: 768px) {
-            .top-bar-container, .header-container { flex-direction: column; gap: 10px; text-align: center; }
-            .top-nav, .main-nav-container { justify-content: center; }
-            .main-nav-container a { padding: 10px 12px; font-size: 12px; }
-        }
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        .footer { background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 25px 20px; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-    <!-- 1. Top Taskbar -->
     <div class="top-bar">
         <div class="top-bar-container">
             <nav class="top-nav">
@@ -71,82 +44,73 @@
                 <a href="contact-us.html" class="active">Contact us</a>
                 <a href="partners.html">Partners of ODC Travel</a>
             </nav>
-
-            <div class="lang-selector-wrapper">
-                <select class="lang-select">
-                    <option value="en" selected>🌐 English</option>
-                    <option value="fr">🌐 Français</option>
-                    <option value="de">🌐 Deutsch</option>
-                    <option value="es">🌐 Español</option>
-                    <option value="vi">🌐 Tiếng Việt</option>
-                </select>
-            </div>
         </div>
     </div>
 
-    <!-- Header & Logo -->
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo">ODC TRAVEL</a>
-            <div class="contact-info">
-                <p>Hotline / WhatsApp: <span>+84 949 555 468</span></p>
-                <p>Email: <span>info@odctravel.com.vn</span></p>
+            <div style="text-align: right;">
+                <p>Hotline / WhatsApp: <span style="font-weight: bold; color: #27ae60;">+84 949 555 468</span></p>
             </div>
         </div>
     </header>
 
-    <!-- 2. Main Navigation Bar -->
     <nav class="main-bar">
         <div class="main-nav-container">
             <a href="index.html">Home</a>
             <a href="featured-tours.html">Featured Tours</a>
-            <a href="tours-northern-vietnam.html">Tours Northern Vietnam</a>
-            <a href="tours-central-vietnam.html">Tours Central Vietnam</a>
-            <a href="tours-southern-vietnam.html">Tours Southern Vietnam</a>
-            <a href="travel-blog.html">Travel Blog/Guide</a>
-            <a href="hot-deals.html" class="hot-deal">🔥 Hot Deals</a>
+            <a href="tours-northern-vietnam.html">Northern Vietnam</a>
+            <a href="tours-central-vietnam.html">Central Vietnam</a>
+            <a href="tours-southern-vietnam.html">Southern Vietnam</a>
+            <a href="hot-deals.html" style="background-color: #c0392b;">🔥 Hot Deals</a>
         </div>
     </nav>
 
-    <!-- Main Content: Contact Us -->
     <main class="container">
-        <div style="font-family: 'Segoe UI', Arial, sans-serif; color: #333; line-height: 1.6; max-width: 1000px; margin: auto; padding: 20px;">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h1 style="color: #ff7700; font-size: 36px; margin-bottom: 10px; text-transform: uppercase;">Get In Touch</h1>
-                <p style="color: #777; font-size: 18px;">We are here to help you plan your perfect journey!</p>
-                <div style="width: 60px; height: 3px; background: #ff7700; margin: 20px auto;"></div>
-            </div>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h1 style="color: #ff7700; font-size: 32px; text-transform: uppercase;">Get In Touch</h1>
+            <p style="color: #777;">We are here to help you plan your perfect journey!</p>
+        </div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 30px;">
-                <div style="flex: 1; min-width: 300px; background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #eee;">
-                    <h3 style="color: #222; margin-top: 0; margin-bottom: 25px; font-size: 22px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;">Contact Information</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 30px;">
+            <!-- Khung thông tin liên hệ -->
+            <div style="flex: 1; min-width: 300px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee;">
+                <h3 style="color: #222; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;">Contact Information</h3>
 
-                    <div style="display: flex; align-items: flex-start; margin-bottom: 25px;">
-                        <div style="background: #fff3e6; padding: 12px; border-radius: 50%; margin-right: 15px;">
-                            <span style="font-size: 20px;">📞</span>
-                        </div>
-                        <div>
-                            <b style="display: block; color: #ff7700; font-size: 14px; text-transform: uppercase;">Give us a call</b>
-                            <a href="tel:+84949555468" style="font-size: 18px; color: #222; text-decoration: none; font-weight: bold;">+84 949 555 468</a><br>
-                            <a href="tel:+84916069069" style="font-size: 18px; color: #222; text-decoration: none; font-weight: bold;">+84 916 069 069</a>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; align-items: flex-start; margin-bottom: 25px;">
-                        <div style="background: #fff3e6; padding: 12px; border-radius: 50%; margin-right: 15px;">
-                            <span style="font-size: 20px;">📧</span>
-                        </div>
-                        <div>
-                            <b style="display: block; color: #ff7700; font-size: 14px; text-transform: uppercase;">Send us an email</b>
-                            <a href="mailto:info@odctravel.com.vn" style="font-size: 16px; color: #222; text-decoration: none; font-weight: bold;">info@odctravel.com.vn</a>
-                        </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                    <div style="background: #fff3e6; padding: 10px 14px; border-radius: 50%; margin-right: 15px; font-size: 20px;">📞</div>
+                    <div>
+                        <b style="color: #ff7700; font-size: 12px; text-transform: uppercase; display: block;">Give us a call / WhatsApp</b>
+                        <a href="tel:+84949555468" style="font-size: 16px; font-weight: bold; color: #222;">+84 949 555 468</a><br>
+                        <a href="tel:+84916069069" style="font-size: 16px; font-weight: bold; color: #222;">+84 916 069 069</a>
                     </div>
                 </div>
+
+                <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                    <div style="background: #fff3e6; padding: 10px 14px; border-radius: 50%; margin-right: 15px; font-size: 20px;">📧</div>
+                    <div>
+                        <b style="color: #ff7700; font-size: 12px; text-transform: uppercase; display: block;">Send us an email</b>
+                        <a href="mailto:info@odctravel.com.vn" style="font-size: 16px; font-weight: bold; color: #222;">info@odctravel.com.vn</a>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: flex-start;">
+                    <div style="background: #fff3e6; padding: 10px 14px; border-radius: 50%; margin-right: 15px; font-size: 20px;">📍</div>
+                    <div>
+                        <b style="color: #ff7700; font-size: 12px; text-transform: uppercase; display: block;">Office Address</b>
+                        <p style="font-size: 14px; color: #444; font-weight: bold;">Hanoi Old Quarter, Hoan Kiem, Hanoi, Vietnam</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Khung bản đồ Google Map -->
+            <div style="flex: 1; min-width: 300px; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee; height: 350px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.86385588142!2d105.8471302758788!3d21.034131587456743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbf5c6e7499%3A0x8f7b3b4f53c15383!2sHoan%20Kiem%2C%20Hanoi!5e0!3m2!1sen!2svn!4v1700000000000!5m2!1sen!2svn" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 ODC Travel Vietnam. All Rights Reserved.</p>
     </footer>
