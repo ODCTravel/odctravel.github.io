@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; margin: 0; padding: 10px 0; }
+        .section-title { font-size: 24px; color: #2c3e50; border-bottom: 3px solid #d35400; padding-bottom: 8px; margin-bottom: 25px; text-transform: uppercase; }
+        .tour-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .tour-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
+        .tour-img { width: 100%; height: 170px; object-fit: cover; }
+        .tour-body { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .tour-title { font-size: 15px; font-weight: bold; color: #2c3e50; margin-bottom: 10px; }
+        .tour-meta { font-size: 13px; color: #7f8c8d; margin-bottom: 15px; display: flex; justify-content: space-between; }
+        .tour-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px; }
+        .tour-price { font-size: 18px; font-weight: bold; color: #d35400; }
+        .btn-detail { background-color: #27ae60; color: #fff; padding: 6px 12px; border-radius: 4px; font-size: 13px; font-weight: bold; text-decoration: none; }
+        .why-us { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); margin-top: 35px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; margin-top: 15px; }
+        .feature-icon { font-size: 32px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+    <h2 class="section-title">⭐ Featured Tours</h2>
+    <div class="tour-grid">
+        <div class="tour-card">
+            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=500" class="tour-img">
+            <div class="tour-body">
+                <h3 class="tour-title">Halong Bay Deluxe Cruise 2D1N</h3>
+                <div class="tour-meta"><span>⏱ 2D1N</span><span>⭐ 4.9/5</span></div>
+                <div class="tour-footer">
+                    <span class="tour-price">$145</span>
+                    <a href="deluxe-halong-2d1n.html" target="_self" class="btn-detail">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tour-card">
+            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=500" class="tour-img">
+            <div class="tour-body">
+                <h3 class="tour-title">Sapa Trekking & Homestay Tour 2D1N</h3>
+                <div class="tour-meta"><span>⏱ 2D1N</span><span>⭐ 4.9/5</span></div>
+                <div class="tour-footer">
+                    <span class="tour-price">$115</span>
+                    <a href="sapa-option-01.html" target="_self" class="btn-detail">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tour-card">
+            <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500" class="tour-img">
+            <div class="tour-body">
+                <h3 class="tour-title">Ba Na Hills & Golden Bridge 1 Day</h3>
+                <div class="tour-meta"><span>⏱ Full Day</span><span>⭐ 5.0/5</span></div>
+                <div class="tour-footer">
+                    <span class="tour-price">$65</span>
+                    <a href="ba-na-hills-tour-1d.html" target="_self" class="btn-detail">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tour-card">
+            <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=500" class="tour-img">
+            <div class="tour-body">
+                <h3 class="tour-title">Mekong Delta Discovery 1 Day</h3>
+                <div class="tour-meta"><span>⏱ Full Day</span><span>⭐ 4.8/5</span></div>
+                <div class="tour-footer">
+                    <span class="tour-price">$35</span>
+                    <a href="mekong-delta-1d.html" target="_self" class="btn-detail">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="why-us">
+        <h2 class="section-title">Why Book With ODC Travel?</h2>
+        <div class="features-grid">
+            <div><div class="feature-icon">🛡️</div><h3>Best Price</h3><p>Direct tour operator prices.</p></div>
+            <div><div class="feature-icon">⭐</div><h3>Trusted Quality</h3><p>Top ratings on TripAdvisor.</p></div>
+            <div><div class="feature-icon">💬</div><h3>24/7 Support</h3><p>Assistance anytime you need.</p></div>
+            <div><div class="feature-icon">👌</div><h3>Flexible Booking</h3><p>Easy & flexible cancellation.</p></div>
+        </div>
+    </section>
+
+</body>
+</html>
