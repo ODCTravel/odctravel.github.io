@@ -8,37 +8,43 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f6f9; }
         a { text-decoration: none; color: inherit; }
-        /* Top Bar */
+
+        /* 1. Top Bar (Thanh Taskbar trên cùng) */
         .top-bar { background-color: #1a252f; color: #fff; padding: 8px 20px; font-size: 13px; }
         .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
         .top-nav { display: flex; gap: 15px; flex-wrap: wrap; }
         .top-nav a { color: #ecf0f1; transition: color 0.3s; }
         .top-nav a:hover, .top-nav a.active { color: #f39c12; }
         .lang-select { background-color: #2c3e50; color: #fff; border: 1px solid #455a64; padding: 4px 10px; font-size: 12px; border-radius: 4px; outline: none; }
-        /* Header & Logo */
-        .header { background: #fff; padding: 15px 20px; border-bottom: 1px solid #eee; }
-        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+
+        /* 2. Header Area chứa Banner & Logo ODC Travel (Ở giữa 2 thanh taskbar) */
+        .header { background: #fff; width: 100%; border-bottom: 1px solid #eee; }
+        .header-top { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 28px; font-weight: bold; color: #d35400; text-transform: uppercase; letter-spacing: 1px; }
         .contact-info { text-align: right; font-size: 14px; }
         .contact-info span { font-weight: bold; color: #27ae60; }
-        /* Main Navigation Bar + Search */
+
+        /* Banner hiển thị tràn 100% chiều ngang */
+        .hero-banner { width: 100%; overflow: hidden; }
+        .hero-banner img { width: 100%; height: auto; display: block; object-fit: cover; }
+
+        /* 3. Main Navigation Bar (Thanh Taskbar bên dưới Banner) */
         .main-bar { background-color: #d35400; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .main-nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .nav-links { display: flex; flex-wrap: wrap; }
         .nav-links a { color: #fff; padding: 14px 16px; font-weight: bold; font-size: 14px; transition: background 0.3s; }
         .nav-links a:hover, .nav-links a.active { background-color: #e67e22; }
         .nav-links a.hot-deal { background-color: #c0392b; }
-        /* Search Bar in Main Nav */
         .search-box { display: flex; align-items: center; padding-right: 15px; }
 
-        /* Banner Section */
-        .hero-banner { width: 100%; max-width: 1200px; margin: 0 auto; overflow: hidden; }
-        .hero-banner img { width: 100%; height: auto; display: block; object-fit: cover; }
+        /* 4. Main Content Area (Khu vực nội dung chính của Index) */
+        .main-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        .section-title { font-size: 24px; color: #2c3e50; margin-bottom: 20px; border-bottom: 2px solid #d35400; padding-bottom: 5px; display: inline-block; }
     </style>
 </head>
 <body>
 
-    <!-- Top Bar -->
+    <!-- Taskbar 1: Top Bar -->
     <div class="top-bar">
         <div class="top-bar-container">
             <div class="top-nav">
@@ -54,17 +60,22 @@
         </div>
     </div>
 
-    <!-- Header -->
-    <div class="header">
-        <div class="header-container">
+    <!-- Khu vực nằm giữa 2 thanh Taskbar: Chứa Chữ ODC Travel + Banner tràn màn hình -->
+    <header class="header">
+        <div class="header-top">
             <div class="logo">ODC Travel</div>
             <div class="contact-info">
                 Call Us: <span>+84 912 345 678</span>
             </div>
         </div>
-    </div>
+        
+        <!-- BANNER NẰM Ở ĐÂY (Nằm giữa 2 thanh taskbar) -->
+        <div class="hero-banner">
+            <img src="images/banner_gighub_008 - Copy02.jpg" alt="ODC Travel Banner">
+        </div>
+    </header>
 
-    <!-- Main Navigation -->
+    <!-- Taskbar 2: Main Menu -->
     <div class="main-bar">
         <div class="main-nav-container">
             <div class="nav-links">
@@ -74,15 +85,17 @@
                 <a href="#" class="hot-deal">HOT DEALS</a>
             </div>
             <div class="search-box">
-                <!-- Search input can go here -->
+                <!-- Ô tìm kiếm nếu có -->
             </div>
         </div>
     </div>
 
-    <!-- Hero Banner Section -->
-    <div class="hero-banner">
-        <img src="images/banner_gighub_008 - Copy02.jpg" alt="ODC Travel Banner">
-    </div>
+    <!-- Khu vực nội dung Index chính -->
+    <main class="main-container">
+        <h2 class="section-title">Welcome to ODC Travel</h2>
+        <p>Welcome to ODC Travel - Your trusted partner for authentic Vietnam travel and luxury train journeys.</p>
+        <!-- Thêm các phần nội dung khác của trang index vào đây -->
+    </main>
 
 </body>
 </html>
