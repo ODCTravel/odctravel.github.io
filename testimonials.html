@@ -5,508 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Testimonials - ODC Travel Vietnam</title>
     
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- CORE RESET --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f6f9; }
+        a { text-decoration: none; color: inherit; }
 
-        html, body {
-            width: 100%;
-            overflow-x: hidden;
-            background-color: #f8f9fa;
-            font-family: 'Open Sans', sans-serif;
-            color: #333333;
-            line-height: 1.6;
-        }
+        /* 1. Top Bar (Taskbar 1) */
+        .top-bar { background-color: #1a252f; color: #fff; padding: 8px 20px; font-size: 13px; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .top-nav { display: flex; gap: 15px; flex-wrap: wrap; }
+        .top-nav a { color: #ecf0f1; transition: color 0.3s; }
+        .top-nav a:hover, .top-nav a.active { color: #f39c12; }
+        .lang-select { background-color: #2c3e50; color: #fff; border: 1px solid #455a64; padding: 4px 10px; font-size: 12px; border-radius: 4px; outline: none; }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-        }
+        /* 2. Banner Area (Nằm giữa 2 Taskbar - Full Width) */
+        .top-hero-banner { width: 100%; overflow: hidden; background: #fff; border-bottom: 1px solid #eee; }
+        .top-hero-banner img { width: 100%; height: auto; display: block; object-fit: cover; }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        /* 3. Main Navigation Bar + Search (Taskbar 2) */
+        .main-bar { background-color: #d35400; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .main-nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-links { display: flex; flex-wrap: wrap; }
+        .nav-links a { color: #fff; padding: 14px 16px; font-weight: bold; font-size: 14px; transition: background 0.3s; }
+        .nav-links a:hover, .nav-links a.active { background-color: #e67e22; }
+        .nav-links a.hot-deal { background-color: #c0392b; }
 
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
+        /* Search Bar */
+        .search-box { display: flex; align-items: center; padding-right: 15px; }
+        .search-box input { padding: 6px 12px; border: none; border-radius: 4px 0 0 4px; outline: none; font-size: 13px; }
+        .search-box button { background: #2c3e50; color: #fff; border: none; padding: 6px 12px; border-radius: 0 4px 4px 0; cursor: pointer; font-size: 13px; font-weight: bold; }
+        .search-box button:hover { background: #1a252f; }
 
-        /* --- HEADER / NAVIGATION --- */
-        header {
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
+        /* Content Layout */
+        .main-container { max-width: 1200px; margin: 30px auto; padding: 0 15px; display: grid; grid-template-columns: 1fr 320px; gap: 30px; }
+        .content-box { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .sidebar-box { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-
-        .logo a {
-            font-size: 24px;
-            font-weight: 800;
-            color: #d35400;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            white-space: nowrap;
-        }
-
-        .logo span {
-            color: #ff7700;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-            align-items: center;
-        }
-
-        nav a {
-            font-weight: 600;
-            font-size: 15px;
-            color: #444;
-            transition: color 0.3s;
-            white-space: nowrap;
-        }
-
-        nav a:hover, nav a.active {
-            color: #ff7700;
-        }
-
-        /* --- BREADCRUMB BANNER --- */
-        .breadcrumb-banner {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('images/banner_gighub_0081.jpg') center center / cover no-repeat;
-            color: #ffffff;
-            padding: 60px 15px;
-            min-height: 250px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .breadcrumb-banner h1 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .breadcrumb-links {
-            font-size: 15px;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-        }
-
-        .breadcrumb-links a {
-            color: #ff7700;
-            font-weight: 600;
-        }
-
-        /* --- MAIN LAYOUT & SIDEBAR --- */
-        .main-wrapper {
-            padding: 40px 15px;
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 30px;
-            align-items: start;
-        }
-
-        .sidebar {
-            position: sticky;
-            top: 90px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .widget {
-            background: #ffffff;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-        }
-
-        .widget-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #ff7700;
-            text-transform: uppercase;
-        }
-
-        .contact-widget-list {
-            list-style: none;
-        }
-
-        .contact-widget-list li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-            font-size: 14px;
-        }
-
-        .contact-widget-list i {
-            color: #ff7700;
-            font-size: 16px;
-            width: 20px;
-            text-align: center;
-        }
-
-        .btn-whatsapp-sidebar {
-            display: block;
-            background: #25d366;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 14px;
-            margin-top: 15px;
-            transition: background 0.3s;
-        }
-
-        .btn-whatsapp-sidebar:hover {
-            background: #1eb954;
-        }
-
-        /* --- CONTENT AREA --- */
-        .content-area {
-            background: #ffffff;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .testimonial-header {
-            background: linear-gradient(135deg, #ff7700, #d35400);
-            border-radius: 12px;
-            color: white;
-            margin-bottom: 30px;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .testimonial-header h2 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .trust-badges-bar {
-            background: #fff3e6;
-            border-radius: 10px;
-            border: 1px solid #ffcc80;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-bottom: 30px;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .trust-badge-item .val {
-            color: #ff7700;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .trust-badge-item .lbl {
-            color: #666;
-            font-size: 13px;
-        }
-
-        .review-grid {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            margin-bottom: 30px;
-        }
-
-        .review-card {
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            padding: 20px;
-            border: 1px solid #f0f0f0;
-        }
-
-        .review-card-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .review-stars { color: #f1c40f; font-size: 15px; }
-        .review-date { color: #888; font-size: 12px; font-weight: bold; }
-        .review-text { color: #444; font-style: italic; margin-bottom: 15px; font-size: 14px; line-height: 1.6; }
-        .review-user-info { display: flex; align-items: center; gap: 12px; }
-
-        .avatar-badge {
-            border-radius: 50%;
-            color: white;
-            display: flex;
-            font-size: 16px;
-            font-weight: bold;
-            height: 40px;
-            width: 40px;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .review-user-details strong { color: #222; display: block; font-size: 14px; }
-        .review-user-details span { color: #777; font-size: 12px; }
-
-        .pagination-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-
-        .pagination-btn {
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 10px 18px;
-        }
-
-        .pagination-btn.active { background: #ff7700; color: #ffffff; }
-        .pagination-btn.inactive { background: #eeeeee; color: #333333; }
-
-        .cta-banner {
-            background: #222222;
-            border-radius: 15px;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .btn-cta-whatsapp {
-            background: #25d366;
-            border-radius: 50px;
-            color: white;
-            display: inline-block;
-            font-size: 15px;
-            font-weight: bold;
-            padding: 12px 30px;
-            margin-top: 15px;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: #1a1a1a;
-            color: #aaaaaa;
-            padding: 25px 0;
-            font-size: 14px;
-            width: 100%;
-            margin-top: 40px;
-        }
-
-        .footer-bottom {
-            text-align: center;
-        }
+        /* Footer */
+        footer { background: #1a252f; color: #ccc; text-align: center; padding: 20px; margin-top: 40px; font-size: 14px; }
 
         @media (max-width: 992px) {
-            .main-wrapper { grid-template-columns: 1fr; }
-            .sidebar { position: static; }
+            .main-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">ODC Travel <span>Vietnam</span></a>
+    <!-- 1. TOP BAR (Taskbar 1) -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="testimonials.html" class="active">Testimonials</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact-us.html">Contact Us</a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="testimonials.html" class="active">Testimonials</a></li>
-                    <li><a href="faqs.html">FAQs</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- BREADCRUMB BANNER -->
-    <section class="breadcrumb-banner">
-        <div>
-            <h1>Customer Testimonials</h1>
-            <div class="breadcrumb-links">
-                <a href="index.html">Home</a> / <span>Testimonials</span>
+            <div>
+                <select class="lang-select">
+                    <option value="en">English</option>
+                    <option value="vi">Tiếng Việt</option>
+                </select>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- MAIN CONTENT AREA -->
-    <div class="container main-wrapper">
-        
-        <!-- MAIN CONTENT (LEFT) -->
-        <main class="content-area">
+    <!-- 2. BANNER AREA (Chèn ảnh trực tiếp giống trang About Us) -->
+    <div class="top-hero-banner">
+        <img src="images/banner_gighub_0081.jpg" alt="ODC Travel Banner">
+    </div>
+
+    <!-- 3. MAIN NAVIGATION BAR (Taskbar 2) -->
+    <div class="main-bar">
+        <div class="main-nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="testimonials.html" class="active">Testimonials</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact-us.html">Contact Us</a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search tours...">
+                <button type="submit">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-container">
+        <!-- Content Area -->
+        <main class="content-box">
+            <h1 style="color: #d35400; margin-bottom: 15px;">Customer Testimonials</h1>
+            <p style="margin-bottom: 20px;">Discover what travelers say about their trips with ODC Travel Vietnam!</p>
             
-            <div class="testimonial-header">
-                <h2>Customer Testimonials</h2>
-                <p>Discover what 1,500+ international travelers say about their trip with ODC Travel!</p>
+            <div style="background: #fff3e6; padding: 15px; border-left: 4px solid #d35400; margin-bottom: 20px;">
+                <strong>⭐ Rating: 4.9/5</strong> - Based on 1,500+ international traveler reviews.
             </div>
 
-            <div class="trust-badges-bar">
-                <div class="trust-badge-item">
-                    <div class="val">⭐ 4.9/5</div>
-                    <div class="lbl">Average Rating</div>
+            <!-- Review Cards -->
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div style="border: 1px solid #eee; padding: 15px; border-radius: 6px; background: #fafafa;">
+                    <p style="font-style: italic; color: #555;">"Our 2D1N cruise in Halong Bay was unforgettable. Everything was organized perfectly!"</p>
+                    <small style="color: #888; font-weight: bold; display: block; margin-top: 8px;">— John &amp; Sarah (Australia)</small>
                 </div>
-                <div class="trust-badge-item">
-                    <div class="val">🌍 1,500+</div>
-                    <div class="lbl">Happy Travelers</div>
-                </div>
-                <div class="trust-badge-item">
-                    <div class="val">💯 100%</div>
-                    <div class="lbl">Tailor-Made Service</div>
+                <div style="border: 1px solid #eee; padding: 15px; border-radius: 6px; background: #fafafa;">
+                    <p style="font-style: italic; color: #555;">"Great hospitality and quick support via WhatsApp. Highly recommended ODC Travel."</p>
+                    <small style="color: #888; font-weight: bold; display: block; margin-top: 8px;">— Emma Watson (UK)</small>
                 </div>
             </div>
-
-            <!-- PAGE 1 OF TESTIMONIALS -->
-            <div id="review-page-1" class="review-grid">
-                <div class="review-card" style="border-left: 5px solid #ff7700;">
-                    <div class="review-card-top">
-                        <span class="review-stars">★★★★★</span>
-                        <span class="review-date"><i class="fa-regular fa-calendar"></i> Sept 18, 2026</span>
-                    </div>
-                    <p class="review-text">"Our 2D1N Bassac Cruise in the Mekong Delta organized by ODC Travel was the highlight of our Vietnam trip. Everything was punctual and comfortable!"</p>
-                    <div class="review-user-info">
-                        <div class="avatar-badge" style="background: #ff7700;">JS</div>
-                        <div class="review-user-details">
-                            <strong>John &amp; Sarah Miller</strong>
-                            <span>🇦🇺 Australia • Mekong Delta Cruise</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card" style="border-left: 5px solid #27ae60;">
-                    <div class="review-card-top">
-                        <span class="review-stars">★★★★★</span>
-                        <span class="review-date"><i class="fa-regular fa-calendar"></i> Aug 28, 2026</span>
-                    </div>
-                    <p class="review-text">"Unbelievable 3D2N Halong Bay cruise! ODC Travel customized the itinerary according to our preferences. Top-tier hospitality."</p>
-                    <div class="review-user-info">
-                        <div class="avatar-badge" style="background: #27ae60;">EM</div>
-                        <div class="review-user-details">
-                            <strong>Emma Watson &amp; Family</strong>
-                            <span>🇬🇧 UK • Halong Bay 3D2N</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PAGE 2 OF TESTIMONIALS -->
-            <div id="review-page-2" class="review-grid" style="display: none;">
-                <div class="review-card" style="border-left: 5px solid #8e44ad;">
-                    <div class="review-card-top">
-                        <span class="review-stars">★★★★★</span>
-                        <span class="review-date"><i class="fa-regular fa-calendar"></i> Dec 14, 2025</span>
-                    </div>
-                    <p class="review-text">"We had a fabulous time celebrating our anniversary. ODC Travel organized a surprise cake on board for us! Truly thoughtful team."</p>
-                    <div class="review-user-info">
-                        <div class="avatar-badge" style="background: #8e44ad;">BT</div>
-                        <div class="review-user-details">
-                            <strong>Brian &amp; Teresa</strong>
-                            <span>🇳🇿 New Zealand • Mekong Delta Tour</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pagination Controls -->
-            <div class="pagination-container">
-                <button id="btn-page-1" class="pagination-btn active" onclick="switchPage(1)">1</button>
-                <button id="btn-page-2" class="pagination-btn inactive" onclick="switchPage(2)">2</button>
-            </div>
-
-            <!-- CTA Banner -->
-            <div class="cta-banner">
-                <h3>Ready to Create Your Own Story in Vietnam?</h3>
-                <p>Let ODC Travel design your dream itinerary with 24/7 personal support!</p>
-                <a href="https://wa.me/84916069069" class="btn-cta-whatsapp" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP FOR FREE CONSULTATION
-                </a>
-            </div>
-
         </main>
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
-            <div class="widget">
-                <h3 class="widget-title">Need Assistance?</h3>
-                <ul class="contact-widget-list">
-                    <li><i class="fa-solid fa-phone"></i> <strong>Hotline:</strong> +84 916 069 069</li>
-                    <li><i class="fa-brands fa-whatsapp"></i> <strong>WhatsApp:</strong> +84 916 069 069</li>
-                    <li><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> info@odctravel.com</li>
-                    <li><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Hanoi Old Quarter, Vietnam</li>
-                </ul>
-                <a href="https://wa.me/84916069069" class="btn-whatsapp-sidebar" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> Quick Contact
-                </a>
-            </div>
+        <!-- Sidebar -->
+        <aside class="sidebar-box">
+            <h3 style="color: #2c3e50; border-bottom: 2px solid #d35400; padding-bottom: 8px; margin-bottom: 15px;">Contact Support</h3>
+            <p><strong>Hotline/WhatsApp:</strong> +84 916 069 069</p>
+            <p style="margin-top: 8px;"><strong>Email:</strong> info@odctravel.com</p>
+            <p style="margin-top: 8px;"><strong>Location:</strong> Hanoi Old Quarter, Vietnam</p>
         </aside>
-
     </div>
 
     <!-- FOOTER -->
     <footer>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 ODC Travel Vietnam. All Rights Reserved.</p>
-        </div>
+        <p>&copy; 2026 ODC Travel Vietnam. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        function switchPage(pageNum) {
-            document.getElementById('review-page-1').style.display = pageNum === 1 ? 'grid' : 'none';
-            document.getElementById('review-page-2').style.display = pageNum === 2 ? 'grid' : 'none';
-            
-            var btn1 = document.getElementById('btn-page-1');
-            var btn2 = document.getElementById('btn-page-2');
-
-            if (pageNum === 1) {
-                btn1.className = 'pagination-btn active';
-                btn2.className = 'pagination-btn inactive';
-            } else {
-                btn1.className = 'pagination-btn inactive';
-                btn2.className = 'pagination-btn active';
-            }
-        }
-    </script>
 </body>
 </html>
