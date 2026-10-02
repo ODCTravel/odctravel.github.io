@@ -5,36 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - ODC Travel Vietnam</title>
     <style>
-        /* CSS Reset & General */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.8; color: #333; background-color: #f8f9fa; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f6f9; }
         a { text-decoration: none; color: inherit; }
 
-        /* 1. Top Bar Navigation */
+        /* 1. Top Bar (Taskbar 1) */
         .top-bar { background-color: #1a252f; color: #fff; padding: 8px 20px; font-size: 13px; }
         .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
         .top-nav { display: flex; gap: 15px; flex-wrap: wrap; }
         .top-nav a { color: #ecf0f1; transition: color 0.3s; }
         .top-nav a:hover, .top-nav a.active { color: #f39c12; }
+        .lang-select { background-color: #2c3e50; color: #fff; border: 1px solid #455a64; padding: 4px 10px; font-size: 12px; border-radius: 4px; outline: none; }
 
-        /* Multi-Language Dropdown Selector */
-        .lang-selector-wrapper { position: relative; display: inline-block; }
-        .lang-select {
-            background-color: #2c3e50;
-            color: #fff;
-            border: 1px solid #455a64;
-            padding: 4px 10px;
-            font-size: 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            outline: none;
-        }
-
-        /* 2. Banner Area nằm giữa 2 thanh Taskbar (Thay thế Header cũ, thoáng chữ) */
+        /* 2. Banner Area (Nằm giữa 2 Taskbar - Full Width) */
         .top-hero-banner { width: 100%; overflow: hidden; background: #fff; border-bottom: 1px solid #eee; }
         .top-hero-banner img { width: 100%; height: auto; display: block; object-fit: cover; }
 
-        /* 3. Main Navigation Bar + Search */
+        /* 3. Main Navigation Bar + Search (Taskbar 2) */
         .main-bar { background-color: #d35400; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .main-nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .nav-links { display: flex; flex-wrap: wrap; }
@@ -42,34 +29,25 @@
         .nav-links a:hover, .nav-links a.active { background-color: #e67e22; }
         .nav-links a.hot-deal { background-color: #c0392b; }
 
-        /* Search Bar in Main Nav */
+        /* Search Bar */
         .search-box { display: flex; align-items: center; padding-right: 15px; }
         .search-box input { padding: 6px 12px; border: none; border-radius: 4px 0 0 4px; outline: none; font-size: 13px; }
         .search-box button { background: #2c3e50; color: #fff; border: none; padding: 6px 12px; border-radius: 0 4px 4px 0; cursor: pointer; font-size: 13px; font-weight: bold; }
         .search-box button:hover { background: #1a252f; }
 
-        /* Layout Grid (Main Content + Sidebar) */
+        /* Layout Grid */
         .layout-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; display: flex; gap: 30px; }
-        .main-content { flex: 3; min-width: 0; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .main-content { flex: 3; min-width: 0; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
         .sidebar { flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 25px; }
 
-        /* Content Styling */
-        .page-title { font-size: 28px; color: #d35400; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .content-section { margin-bottom: 25px; }
-        .content-section h3 { color: #2c3e50; margin-bottom: 10px; font-size: 20px; }
-
-        /* Widgets trong Sidebar */
+        /* Widgets Sidebar */
         .widget { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #eee; }
         .widget-title { font-size: 16px; font-weight: bold; color: #2c3e50; border-left: 4px solid #d35400; padding-left: 10px; margin-bottom: 15px; text-transform: uppercase; }
-
-        /* Social Links */
         .social-links { display: flex; gap: 10px; }
         .social-btn { flex: 1; text-align: center; padding: 8px 0; border-radius: 5px; color: #fff; font-size: 13px; font-weight: bold; }
         .btn-fb { background: #3b5998; }
         .btn-wa { background: #25d366; }
         .btn-ta { background: #00af87; }
-
-        /* Item Lists */
         .item-list { display: flex; flex-direction: column; gap: 12px; }
         .list-item { display: flex; gap: 10px; align-items: center; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
         .list-item:last-child { border-bottom: none; padding-bottom: 0; }
@@ -77,6 +55,9 @@
         .list-item-info { font-size: 13px; }
         .list-item-title { font-weight: bold; color: #333; line-height: 1.3; }
         .list-item-price { color: #d35400; font-weight: bold; font-size: 12px; margin-top: 3px; }
+        .label-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+        .label-item { background: #f0f3f6; color: #555; padding: 5px 12px; border-radius: 15px; font-size: 12px; transition: 0.3s; }
+        .label-item:hover { background: #d35400; color: #fff; }
 
         /* Footer */
         .footer { background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 25px 20px; margin-top: 50px; font-size: 14px; }
@@ -101,7 +82,7 @@
                 <a href="contact-us.html">Contact us</a>
                 <a href="partners.html">Partners of ODC Travel</a>
             </nav>
-            <div class="lang-selector-wrapper">
+            <div>
                 <select class="lang-select">
                     <option value="en" selected>🌐 English</option>
                     <option value="fr">🌐 Français</option>
@@ -112,7 +93,7 @@
         </div>
     </div>
 
-    <!-- BANNER TRÀN MÀN HÌNH NẰM GIỮA 2 TASKBAR (Bấm vào banner để quay về trang chủ) -->
+    <!-- BANNER NẰM GIỮA 2 THANH TASKBAR (Click để về trang chủ index.html) -->
     <header class="top-hero-banner">
         <a href="index.html">
             <img src="images/banner_gighub_008 - Copy02.jpg" alt="ODC Travel Banner">
@@ -141,22 +122,80 @@
     <!-- Layout Grid: Main Content + Right Sidebar -->
     <div class="layout-container">
 
-        <!-- Nội dung trang About Us -->
+        <!-- Cột trái: Nội dung chính trang About Us -->
         <main class="main-content">
-            <h1 class="page-title">About ODC Travel Vietnam</h1>
-            
-            <div class="content-section">
-                <h3>Our Story & Heritage</h3>
-                <p>Established in 1997 in Hanoi, ODC Travel (Original Destination Connection) has grown from a passionate local tour provider into one of Vietnam's most reliable travel management agencies. With over 25 years of hands-on industry experience, we specialize in luxury train travel, custom Indochina packages, Halong Bay cruises, and authentic cultural journeys.</p>
-            </div>
+            <div style="color: #333333; font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.8; margin: auto; max-width: 900px; padding: 10px;">
+                
+                <!-- Ảnh đầu tiên -->
+                <div style="margin-bottom: 30px; text-align: center;">
+                    <img border="0" src="images/About_us_Hanoi_city.jpg" alt="About Us Hanoi City" style="border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 15px; width: 100%;" />
+                </div>
 
-            <div class="content-section">
-                <h3>Why Travel With Us?</h3>
-                <p>We believe travel should be about meaningful connections rather than standard sightseeing. Our direct partnerships with luxury train operators, boutique hotels, and local guides allow us to deliver exceptional service at net competitive rates without compromising on quality or safety.</p>
+                <div style="margin-bottom: 40px; text-align: center;">
+                    <h1 style="color: #ff7700; font-size: 36px; margin-bottom: 10px; text-transform: uppercase;">About ODC Travel Vietnam</h1>
+                    <p style="color: #777777; font-size: 18px; font-style: italic;">"Original Destination Connection"</p>
+                    <div style="background: rgb(255, 119, 0); height: 3px; margin: 20px auto; width: 80px;"></div>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h3 style="border-left: 5px solid rgb(255, 119, 0); color: #222222; font-size: 20px; padding-left: 15px; text-transform: uppercase;">Our Heritage Since 1997</h3>
+                    <p>It’s been more than a decade since 1997 we have been operating in the realm of tourism with a literally wide range of packages for every of your Vietnam travel and tours. During all these years, we have witnessed that it’s nothing but the experiences that you treasure in your memories.</p>
+                    <p>We have carved out a name for ourselves as a reputable provider of quality tours at affordable prices in <b style="color: #ff7700;">Vietnam, Cambodia, and Laos</b> to travelers throughout the world.</p>
+                </div>
+
+                <!-- Ảnh thứ 2 -->
+                <div style="margin: 30px 0px; text-align: center;">
+                    <div class="separator" style="clear: both; text-align: center;">
+                        <img border="0" src="images/odc_travel_001.jpg" alt="ODC Travel 001" style="max-width: 100%; height: auto; border-radius: 8px;" />
+                    </div>
+                </div>
+
+                <div style="background: rgb(249, 249, 249); border-radius: 10px; margin-bottom: 40px; padding: 30px;">
+                    <h3 style="color: #222222; font-size: 20px; margin-top: 0px; text-transform: uppercase;">Our Vision &amp; Mission</h3>
+                    <p>ODC Vietnam has become a successful destination management company specializing in providing a deeper, cultural experience. We want our clients to <b style="background: rgb(255, 243, 230); padding: 2px 5px;">understand a destination rather than just see it</b>.</p>
+                    <p>Thanks to our enthusiastic, friendly, and professionally trained staff, we have won appreciations from the majority of our customers worldwide.</p>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h3 style="border-left: 5px solid rgb(255, 119, 0); color: #222222; font-size: 20px; padding-left: 15px; text-transform: uppercase;">Comprehensive Travel Services</h3>
+                    <p>Over the last ten years, we are proud to provide high-quality services:</p>
+                    <ul style="display: grid; gap: 15px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); list-style: none; padding-left: 0px; margin-top: 15px;">
+                        <li style="background: rgb(255, 255, 255); border-radius: 5px; border: 1px solid rgb(238, 238, 238); box-shadow: rgba(0, 0, 0, 0.05) 2px 2px 5px; padding: 15px;">✅ <b>Tour programs</b> (Culture, Adventure, Leisure)</li>
+                        <li style="background: rgb(255, 255, 255); border-radius: 5px; border: 1px solid rgb(238, 238, 238); box-shadow: rgba(0, 0, 0, 0.05) 2px 2px 5px; padding: 15px;">✅ <b>Visa &amp; Ticketing</b> services</li>
+                        <li style="background: rgb(255, 255, 255); border-radius: 5px; border: 1px solid rgb(238, 238, 238); box-shadow: rgba(0, 0, 0, 0.05) 2px 2px 5px; padding: 15px;">✅ <b>Hotel reservations</b></li>
+                        <li style="background: rgb(255, 255, 255); border-radius: 5px; border: 1px solid rgb(238, 238, 238); box-shadow: rgba(0, 0, 0, 0.05) 2px 2px 5px; padding: 15px;">✅ <b>Transportation</b> (Cars, bikes, cruises)</li>
+                    </ul>
+                </div>
+
+                <!-- Ảnh cuối -->
+                <div style="margin: 30px 0px; text-align: center;">
+                    <div class="separator" style="clear: both; text-align: center;">
+                        <img border="0" src="images/odc_travel_002.jpg" alt="ODC Travel 002" style="max-width: 100%; height: auto; border-radius: 8px;" />
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h3 style="border-left: 5px solid rgb(255, 119, 0); color: #222222; font-size: 20px; padding-left: 15px; text-transform: uppercase;">Why Choose ODC Travel?</h3>
+                    <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
+                        <div style="border-bottom: 1px dashed rgb(221, 221, 221); padding-bottom: 10px;"><b>⭐ Strong Partnerships:</b> We work with top local suppliers and international networks to ensure the best rates.</div>
+                        <div style="border-bottom: 1px dashed rgb(221, 221, 221); padding-bottom: 10px;"><b>⭐ Professional Team:</b> 40+ experts who are not just "couriers" but true cultural ambassadors.</div>
+                        <div style="border-bottom: 1px dashed rgb(221, 221, 221); padding-bottom: 10px;"><b>⭐ Quality Assurance:</b> Rigorous annual evaluation of our guides to maintain top-tier service.</div>
+                    </div>
+                </div>
+
+                <div style="background: rgb(34, 34, 34); border-radius: 10px; color: white; padding: 30px; text-align: center;">
+                    <h3 style="color: #ff7700; margin-top: 0px;">UNFORGETTABLE MEMORIES</h3>
+                    <p>We share a common commitment to quality and the delivery of authentic travel experiences.</p>
+                    <div style="border-top: 1px solid rgb(68, 68, 68); margin-top: 20px; padding-top: 20px;">
+                        <p style="margin: 5px 0px;">📞 <b>Hotline (WhatsApp/Viber):</b> <a href="tel:+84916069069" style="color: #ff7700; text-decoration: none;">+84 916 069 069</a></p>
+                        <p style="margin: 5px 0px;">📧 <b>Email:</b> <a href="mailto:info@odctravel.com.vn" style="color: #ff7700; text-decoration: none;">info@odctravel.com.vn</a></p>
+                    </div>
+                </div>
+
             </div>
         </main>
 
-        <!-- Sidebar Widgets -->
+        <!-- Cột phải: Sidebar Widgets -->
         <aside class="sidebar">
             <div class="widget">
                 <div class="widget-title">Connect With Us</div>
@@ -186,6 +225,19 @@
                     </div>
                 </div>
             </div>
+
+            <div class="widget">
+                <div class="widget-title">Tour Categories</div>
+                <div class="label-cloud">
+                    <a href="#" class="label-item">Halong Cruise</a>
+                    <a href="#" class="label-item">Sapa Trekking</a>
+                    <a href="#" class="label-item">Mekong Delta</a>
+                    <a href="#" class="label-item">Day Tours</a>
+                    <a href="#" class="label-item">Cambodia</a>
+                    <a href="#" class="label-item">Laos Package</a>
+                    <a href="#" class="label-item">Hot Deals</a>
+                </div>
+            </div>
         </aside>
 
     </div>
@@ -196,4 +248,4 @@
     </footer>
 
 </body>
-</html>
+    </html>
