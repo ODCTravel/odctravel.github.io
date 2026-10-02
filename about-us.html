@@ -36,9 +36,11 @@
         .search-box button:hover { background: #1a252f; }
 
         /* Layout Grid */
-        .layout-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; display: flex; gap: 30px; }
+        .layout-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; display: flex; gap: 30px; align-items: flex-start; }
         .main-content { flex: 3; min-width: 0; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .sidebar { flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 25px; }
+
+        /* Sidebar - Khóa cố định vị trí khi cuộn trang */
+        .sidebar { flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 25px; position: sticky; top: 70px; }
 
         /* Widgets Sidebar */
         .widget { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #eee; }
@@ -64,7 +66,7 @@
 
         @media (max-width: 900px) {
             .layout-container { flex-direction: column; }
-            .sidebar { min-width: 100%; }
+            .sidebar { min-width: 100%; position: static; }
         }
     </style>
 </head>
@@ -195,7 +197,7 @@
             </div>
         </main>
 
-        <!-- Cột phải: Sidebar Widgets -->
+        <!-- Cột phải: Sidebar Widgets (Đã khóa vị trí cố định) -->
         <aside class="sidebar">
             <div class="widget">
                 <div class="widget-title">Connect With Us</div>
@@ -248,4 +250,4 @@
     </footer>
 
 </body>
-    </html>
+</html>
